@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the number</title>
+</head>
+<body>
+    <main>
+        <h1>Welcome to the "Guess the number"</h1>
+        <div class="top-bar">
+            <div class="try">
+                <span>Try:</span>
+                <span class="try_countert">0</span>
+            </div>
+            <div class="score">
+                <span>Score:</span>
+                <span class="score_counter">0</span>
+            </div>
+            <div class="live">
+                <span>Your life:</span>
+                <span class="live_countert">0</span>
+            </div>
+        </div>
+        <div class="game">
+            <h2 class="game_result">Press start</h2>
+            <div class="game_start">
+                <button id="btn-start" class="">Start</button>
+                <button id="btn-stop" class="hide">Stop</button>
+            </div>
+            <div class="control">
+                <input type="number" id="inputGuess">
+                <button id="btnGuess" disabled>Submit</button>
+                <br>
+
+            </div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

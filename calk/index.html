@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <div>
+            <h2>Squere</h2>
+            <p>Make a calculator that will find the area and perimeter of a square.</p>
+            <label for="squareSide">Enter the length of the side:</label>
+            <input type="number" name="squareSide" id="squareSide" placeholder="side">
+            <br>
+            <label>Area: </label><span id="AreaS">0</span>
+            <br>
+            <label>Perimeter: </label><span id="PerimeterS">0</span>
+        </div>
+
+        <div>
+            <h2>Rectangle</h2>
+            <p>Make a calculator that will walk along the area and perimeter of the figure.</p>
+            <label for="rectangleSide">Enter the length of the side:</label><br>
+            <label for="rectangleSide1">Side 1:</label>
+            <input type="number" name="rectangleSide" id="rectangleSide1" placeholder="side one">
+            <label for="rectangleSide1">Side 2:</label>
+            <input type="number" name="rectangleSide" id="rectangleSide2" placeholder="side two">
+            <br>
+            <button class="btn" onclick="calkRec()">Take result</button>
+            <br>
+            <label>Area: </label><span id="AreaR">0</span>
+            <br>
+            <label>Perimeter: </label><span id="PerimeterR">0</span>
+        </div>
+
+        <div>
+            <h2>Circle</h2>
+            <p>Make a calculator that will find the area of ​​a circle and the circumference.</p>
+            <label for="squareSide">Enter the radius:</label>
+            <input type="number" name="radius" id="Radius" placeholder="radius">
+            <br>
+            <label>Circumference: </label><span id="AreaC">0</span>
+            <br>
+            <label>Area: </label><span id="PerimeterC">0</span>
+        </div>
+
+        <div>
+            <h2>Triangle</h2>
+            <p>Make a calculator that will find the area of ​​a triangle based on three sides.</p>
+            <label for="TriangleSide">Enter the length of the side:</label><br>
+            <label for="TriangleSide1">Side 1:</label>
+            <input type="number" name="TriangleeSide" id="TriangleSide1" class="triangle" placeholder="side one">
+            <br>
+            <label for="TriangleSide1">Side 2:</label>
+            <input type="number" name="TriangleSide" id="TriangleSide2" class="triangle" placeholder="side two">
+            <br>
+            <label for="TriangleSide3">Side 3:</label>
+            <input type="number" name="TriangleSide" id="TriangleSide3" class="triangle" placeholder="side three">
+            <br>
+            <button class="btn" onclick="calkTri()">Take result</button>
+            <br>
+            <label>Area: </label><span id="AreaT">0</span>
+            <br>
+            <label>Perimeter: </label><span id="PerimeterT">0</span>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
