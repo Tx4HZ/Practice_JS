@@ -1,0 +1,39 @@
+.card > span {
+    position: relative;
+
+    font-size: 128px;
+    filter: drop-shadow(10px 10px 4px #08080e4d);
+
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+
+.card-back {
+    color: aqua;
+    font-size: 34px !important;
+    left: -135px;
+    transform: rotateY(3.142rad);
+    z-index: -1;
+}
+
+.card {
+    width: fit-content;
+    transition:  all .25s ease-in-out;
+}
+
+.card:hover {
+    transform: rotate3d(0, 1, 0, 180deg) translateX(50px);
+    transition:  all .25s ease-in-out;
+}
+
+.card:hover .card-back {
+    z-index: 1;
+    transition:  all .25s ease-in-out;
+}
+
+body {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
