@@ -7,6 +7,31 @@
     <title>Document</title>
 </head>
 <body>
+    <nav>
+        <span>"FIND A MATCH"</span>
+        <button id="btn-start">START</button>
+        <span>BY: <a href="https://github.com/Tx4HZ">@Tx4HZ</a></span>
+    </nav>
+    <main>
+        <div class="status-bar">
+
+        </div>
+
+        <div class="field">
+            <div class="setting hide">
+                <h3>Select field siz:</h3>
+                <div>
+                    <label for="sizeX">X (width):</label><input type="number" id="sizeX" placeholder="2">
+                </div>
+                <div>
+                    <label for="sizeY">Y (height):</label><input type="number" id="sizeY" placeholder="2">
+                </div>
+                <br>
+                <button onclick="startGame()">Let's go!</button>
+            </div>
+            <!-- Здесь рендерятся карты! -->
+        </div>
+    </main>
     <script src="./main.js"></script>
 </body>
 </html>

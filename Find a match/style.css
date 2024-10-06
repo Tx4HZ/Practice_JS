@@ -1,3 +1,67 @@
+body {
+    background-color: #1D1128;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100px;
+
+    border: 2px solid white;
+    border-top: none;
+    border-radius: 0 0 75px 75px;
+
+    margin: 0 25px 25px 25px;
+
+    color: #e5d4ed;
+    font-size: 24px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 25px 10px;
+}
+
+#btn-start {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    background-color: #5941a9;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.field {
+    --set-col: attr(data-col);
+
+    display: grid;
+    content: attr(data-row);
+    gap: 5%;
+
+    justify-items: center;
+
+    width: 90%;
+
+    margin: 0 auto;
+}
+
+.test {
+    font-size: 24px;
+    color: #e5d4ed;
+    border: #e5d4ed solid 2px;
+}
+
 .card > span {
     position: relative;
 
@@ -29,11 +93,4 @@
 .card:hover .card-back {
     z-index: 1;
     transition:  all .25s ease-in-out;
-}
-
-body {
-    margin: 0 auto;
-    width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
 }

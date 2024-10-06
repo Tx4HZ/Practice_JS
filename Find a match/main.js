@@ -2,18 +2,14 @@
 function renderField(arr) {
     for (let index = 0; index < arr.length; index++) {
         for (let i = 0; i < arr[index].length; i++) {
-            // document.write(`<span data-id="${arr[index][i].ID}">${arr[index][i].image}</span>`);
+            //document.write(`<span data-id="${arr[index][i].ID}">${arr[index][i].image}</span>`);
             /*
              TODO: не забыть изменить!
             */
-            document.write(`
-                <div class="card">
-                    <span class="card-front">${arr[index][i].image}</span>
-                    <span class="card-back">${arr[index][i].ID == "Lucky"?"L":arr[index][i].ID}</span>
-                </div>
-                `)
+            field.innerHTML += `<div class="test">${arr[index][i].ID}</div>`
         }
     }
+    return document.querySelectorAll('.test');
 }
 
 function getField(y = 2, x = 2) {
@@ -25,7 +21,7 @@ function getField(y = 2, x = 2) {
             array[i+1] = {ID: i, image: "🃏 "};
         } else { array[i] = {ID: "Lucky", image: "🃏 "}}
     }
-
+    
     // Тасование Фишера — Йетса
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -39,9 +35,35 @@ function getField(y = 2, x = 2) {
     for (let i = 0; i < Math.ceil(array.length/size); i++) {
         subarray[i] = array.slice((i*size), (i*size) + size)
     }
-    renderField(subarray)
-    return subarray;
+
+    field.style.cssText = `
+        grid-template-columns: repeat(${x}, 1fr);
+        grid-template-rows: repeat(${y}, 1fr);
+    `
+    
+    return renderField(subarray)
 }
 
-let test = getField(3,3);
-console.log(test)
+// let test = getField(3,3);
+// console.log(test)
+
+const btnStart = document.querySelector("#btn-start");
+const settingDialog = document.querySelector('.setting');
+const field = document.querySelector(".field");
+
+btnStart.addEventListener('click', function() {
+    this.disabled = true;
+    settingDialog.classList.toggle('hide')
+    // let test = getField(5, 5);
+    // console.log(test);
+})
+
+/*
+    todo: обработка ввода полей x=1 || y=1; обработка пустых полей, как дефол;
+*/
+function startGame() {
+    let x = document.querySelector('#sizeX').value;
+    let y = document.querySelector('#sizeY').value;
+    settingDialog.classList.toggle('hide');
+    let test = getField(Number(y), Number(x));
+}
